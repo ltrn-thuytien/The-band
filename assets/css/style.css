@@ -4,29 +4,40 @@
     box-sizing: border-box;
 }
 
+.text-white {
+    color: #fff;
+}
+
+.clear {
+    clear: both;
+}
+
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#main {
-
-}
+#main {}
 
 #header {
     height: 46.5px;
     background-color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 #nav {
     display: inline-block;
 }
 
-#nav, .subnav {
+#nav,
+.subnav {
     list-style: none;
 
 }
 
-#nav > li {
+#nav>li {
     display: inline-block;
     float: left;
 }
@@ -34,11 +45,11 @@ html {
 #nav li {
 
     position: relative;
-}   
+}
 
 
 
-#nav > li > a { 
+#nav>li>a {
     color: #fff;
     text-transform: uppercase;
     padding: 0px 12px;
@@ -51,14 +62,14 @@ html {
     display: block;
 }
 
-#nav  li:hover .subnav {
+#nav li:hover .subnav {
     display: block;
 }
 
-#nav > li:hover > a,
-#nav .subnav li:hover a{
+#nav>li:hover>a,
+#nav .subnav li:hover a {
     color: #000;
-    background-color: #ccc; 
+    background-color: #ccc;
 
 }
 
@@ -66,7 +77,7 @@ html {
     display: none;
     position: absolute;
     background-color: #fff;
-    box-shadow: 0px 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.3);
     min-width: 160px;
     top: 100%;
     left: 0;
@@ -79,7 +90,7 @@ html {
 
 }
 
-#nav .nav-nav-arrow-down {
+#nav .nav-arrow-down {
     font-size: 14px;
 }
 
@@ -90,7 +101,7 @@ html {
 }
 
 #header .search-btn:hover {
-    background-color:  #f44336;
+    background-color: #f44336;
     cursor: pointer;
 }
 
@@ -105,14 +116,287 @@ html {
 
 
 #slider {
-    min-height: 300px;
-    /* background-color: #333; */
+    position: relative;
+    margin-top: 46.5px;
+    padding-top: 50%;
+    background: url('/assets/img/Slider/chicago.jpg') top center / cover no-repeat;
 }
 
-#content {
+#slider .text-content {
+    position: absolute;
+    color: #fff;
+    bottom: 47px;
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-heading {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 10px 0px;
+}
+
+#slider .text-description {
+    font-weight: bolder;
+    font-size: 15px;
+    margin: 15px 0px;
+}
+
+#content {}
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
 
 }
 
-#footer {
+#content .about-text {
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1.4;
+}
 
+#content .member-list {
+    margin-top: 47px;
+    overflow: hidden;
+}
+
+#content .member-item {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+    
+#content .member-name {
+    font-size: 15px;
+
+}
+
+#content .member-img {
+    width: 145.06px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.tour-section {
+    background-color: #000;
+
+}
+
+.ticket {
+    background-color: #fff;
+    margin-top: 41px;
+}
+
+.ticket li{
+    color: #757575;
+    font-size: 15px;
+    padding: 13px 16px;
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+ 
+}
+
+.ticket .sold-out {
+    color: #fff;
+    background-color: #f44336;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.ticket .quantity {
+    width: 24.69px;
+    height: 22.5px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    float: right;
+    margin-right: 16px;
+    border-radius: 50%;
+    line-height: 1.5;
+    margin-top: -2px;
+}
+
+.place-list {
+    margin: 32px -8px 48px;
+
+}
+
+.place-item {
+    float: left;
+    width: 33.33%;
+    padding: 0px 8px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+
+}
+
+.place-body {
+
+    padding: 15px;
+    font-size: 15px;
+    background-color: #fff;
+
+}
+
+.place-heading {
+    font-weight: 600;
+
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-description {
+    margin-top: 15px;
+    line-height: 22.5px;
+}
+
+.place-btn {
+    margin-top: 15px;
+    padding: 11px 16px;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+}
+
+.place-btn:hover {
+    background-color:#ccc;
+    color: #000;
+
+}
+
+
+#footer {}
+
+.modal {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.modal.show {
+    display: flex;  
+}
+
+.modal-container {
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+
+}
+
+.modal-header {
+    background-color: #009688;
+    height: 129px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.modal-close {
+    /* width: 46px;
+    height: 52px; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 12px 16px;
+    cursor: pointer;
+
+}
+
+.modal-close:hover {
+    color: #000;
+    background-color:#ccc;
+}
+
+.modal-header-icon {
+    font-size: 48px;
+    margin-right: 16px;
+}
+
+.modal-body {
+    padding: 15px ;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.modal-label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 24px;
+}   
+
+#buy-tickets {
+    background-color: #009688;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 15px;
+    margin: 15px 0px;
+}
+
+#buy-tickets:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+}
+
+.modal-footer a{
+    color: #2196f3;
 }
